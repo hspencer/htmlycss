@@ -1,0 +1,260 @@
+@charset "UTF-8";
+/* 
+
+c - compilador
+
+de estilos SASS - TDI2020
+
+*/
+/* variables */
+/* Tipografía de Google */
+/*
+Source Sans Pro
+
+    Light 300 
+    Regular 400
+    Semi-bold 600
+    Bold 700
+    Black 900
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2.13vw;
+  min-height: 100vh;
+}
+
+/* Estilos SASS */
+/* HTML */
+header {
+  background-color: black;
+}
+
+header .logo {
+  width: 85vw;
+  padding: 4vh 0;
+  margin: 0 auto;
+  color: white;
+}
+
+header .logo h1 {
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 90%;
+}
+
+header .logo h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
+}
+
+dt a {
+  text-transform: uppercase;
+  padding: 1ex;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 .5ex .5ex 0;
+  border-radius: .3ex;
+  font-size: 1em;
+  letter-spacing: .13ex;
+  margin: 0 .5ex 1vh 0;
+  color: #130616ab;
+  font-weight: 600;
+  border: 0.3ex solid #130616ab;
+}
+
+dt a:hover {
+  background-color: #42424259;
+  color: black;
+  border: .3ex solid black;
+}
+
+dd {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 400;
+  display: block;
+}
+
+/* Clases */
+.grilla {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+  grid-gap: 4em;
+  width: 85vw;
+  margin: 1em auto 0;
+}
+
+.descripcion h2 {
+  margin: .5em 0 1em 0;
+}
+
+.descripcion p {
+  font-size: 1.2rem;
+  line-height: calc(1.3em + (1.5 - 1.3) * ((100vw - 21em)/(35 - 21)));
+  hyphens: auto;
+  font-weight: 300;
+}
+
+.categorias h3 {
+  margin: .5em 0 1em 0;
+}
+
+.barra {
+  grid-column: span 2;
+  background-color: white;
+  border-bottom: 1px solid #130616ab;
+}
+
+.barra nav {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.barra nav li {
+  display: inline-block;
+  padding: 0;
+}
+
+.barra nav li a {
+  display: block;
+  height: 3rem;
+  margin: 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1ex 1.5ex;
+  color: #130616ab;
+  border-right: 1px solid #130616ab;
+}
+
+.barra nav li a:last-child {
+  border-right: 1px solid transparent;
+}
+
+.barra nav li a:hover {
+  color: black;
+}
+
+.barra nav li.search input {
+  position: relative;
+  height: 3rem;
+  top: 0;
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  padding: 0 1em;
+  max-width: 67vw;
+}
+
+.barra nav li.search input:focus, .barra nav li.search input:active {
+  box-shadow: 0 0 10px #130616ab;
+  background-color: white;
+}
+
+.barra nav li.search button {
+  height: 3rem;
+  max-width: 39vw;
+  background: black;
+  color: white;
+  border: 0 3px 0 aliceblue solid black;
+  text-transform: uppercase;
+  letter-spacing: .21ex;
+  font-weight: 900;
+  padding: 0 1.2em;
+  border-right: 3px solid black;
+  border-top: none;
+  border-left: 3px solid black;
+  border-bottom: none;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-top: 3rem;
+  padding: 2em 0;
+}
+
+footer p {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+footer nav.secondary {
+  width: 85vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer nav.secondary li {
+  list-style-type: none;
+  display: inline;
+}
+
+footer nav.secondary li a {
+  padding: 1ex 1em;
+}
+
+footer a {
+  color: #f8eded98;
+  display: inline-block;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  body {
+    font-size: 18px;
+  }
+  .barra nav {
+    width: 100vw;
+    margin: 0;
+    background-color: black;
+    text-align: center;
+  }
+  .barra nav li a {
+    color: rgba(255, 255, 255, 0.787);
+  }
+  .barra nav li a:hover {
+    color: white;
+  }
+  .barra nav.search {
+    display: flex;
+    width: 100vw;
+    background-color: white;
+    text-align: left;
+    border-top: 1px solid #130616ab;
+    margin-top: 1rem;
+  }
+  .barra nav.search input {
+    background-color: white;
+    width: 69vw;
+  }
+  .barra nav.search button {
+    width: 30vw;
+  }
+  .grilla {
+    display: block;
+  }
+}
+
+/* Landscape */
+/* ----------- Google Pixel ----------- */
+/* Portrait */
+/* Landscape */
+/* finito */
+/*# sourceMappingURL=c.css.map */

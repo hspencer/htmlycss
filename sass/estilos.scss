@@ -1,0 +1,180 @@
+/* Estilos SASS */
+
+
+/* HTML */
+
+header {
+    background-color: black;
+    .logo {
+        width: $ancho;
+        padding: 4vh 0;
+        margin: 0 auto;
+        color: white;
+        h1 {
+            font-size: 4em;
+            font-weight: 900;
+            line-height: 90%;
+        }
+        h3 {
+            font-size: 1em;
+            text-transform: uppercase;
+            margin: 0 0 1em 0;
+        }
+    }
+}
+
+dt {
+    a {
+        text-transform: uppercase;
+        padding: 1ex;
+        background-color: transparent;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 .5ex .5ex 0;
+        border-radius: .3ex;
+        font-size: 1em;
+        letter-spacing: .13ex;
+        margin: 0 .5ex 1vh 0;
+        color: $color-gris;
+        font-weight: 600;
+        border: .3ex solid $color-gris;
+        &:hover {
+            background-color: $color-gris-fade;
+            color: black;
+            border: .3ex solid black;
+        }
+    }
+}
+
+dd {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 400;
+    display: block;
+}
+
+
+/* Clases */
+
+.grilla {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+    grid-gap: 4em;
+    width: $ancho;
+    margin: 1em auto 0
+}
+
+.descripcion {
+    h2 {
+        margin: .5em 0 1em 0;
+    }
+    p {
+        font-size: 1.2rem;
+        line-height: calc(1.3em + (1.5 - 1.3) * ((100vw - 21em)/(35 - 21)));
+        hyphens: auto;
+        font-weight: 300;
+    }
+}
+
+.categorias {
+    h3 {
+        margin: .5em 0 1em 0;
+    }
+}
+
+.barra {
+    grid-column: span 2;
+    background-color: white;
+    border-bottom: 1px solid $color-gris;
+    nav {
+        width: $ancho;
+        margin: 0 auto;
+        li {
+            display: inline-block;
+            padding: 0;
+            // margin: -3px 0 0 -5px;
+            a {
+                display: block;
+                height: 3rem;
+                margin: 0;
+                font-size: 1.2rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 1ex 1.5ex;
+                color: $color-gris;
+                border-right: 1px solid $color-gris;
+                &:last-child {
+                    border-right: 1px solid transparent;
+                }
+                &:hover {
+                    color: black;
+                }
+            }
+            &.search {
+                input {
+                    position: relative;
+                    height: 3rem;
+                    top: 0;
+                    // line-height: 5vw;
+                    background-color: white;
+                    border: none;
+                    border-radius: 0;
+                    padding: 0 1em;
+                    max-width: 67vw;
+                    &:focus,
+                    &:active {
+                        box-shadow: 0 0 10px $color-gris;
+                        background-color: white;
+                    }
+                }
+                button {
+                    height: 3rem;
+                    max-width: 39vw;
+                    background: black;
+                    color: white;
+                    border: 0 3px 0 aliceblue solid black;
+                    text-transform: uppercase;
+                    letter-spacing: .21ex;
+                    font-weight: 900;
+                    padding: 0 1.2em;
+                    border-right: 3px solid black;
+                    border-top: none;
+                    border-left: 3px solid black;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+    padding: 2em 0;
+    p {
+        width: $ancho;
+        margin: 0 auto;
+    }
+    nav.secondary {
+        width: $ancho;
+        margin: 0 auto;
+        text-align: center;
+        li {
+            list-style-type: none;
+            display: inline;
+            a {
+                padding: 1ex 1em;
+            }
+        }
+    }
+    a {
+        color: $color-light-fade;
+        display: inline-block;
+        &:hover {
+            color: white;
+        }
+    }
+}

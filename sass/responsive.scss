@@ -1,0 +1,62 @@
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    body {
+        font-size: 18px;
+    }
+    .barra {
+        nav {
+            width: 100vw;
+            margin: 0;
+            background-color: black;
+            text-align: center;
+            li {
+                a {
+                    color: rgba(255, 255, 255, 0.787);
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+            &.search {
+                display: flex;
+                width: 100vw;
+                background-color: white;
+                text-align: left;
+                border-top: 1px solid $color-gris;
+                margin-top: 1rem;
+                input {
+                    background-color: white;
+                    width: 69vw;
+                }
+                button {
+                    width: 30vw;
+                }
+            }
+        }
+    }
+    .grilla {
+        display: block;
+    }
+}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+
+/* ----------- Google Pixel ----------- */
+
+
+/* Portrait */
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+
+/* Landscape */
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {}
